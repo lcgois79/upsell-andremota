@@ -647,6 +647,15 @@
     </div>
   </section>
 
+  <!-- ============ CTA PÓS-VÍDEO ============ -->
+  <section class="cta-section" style="padding-top: 24px; padding-bottom: 8px;">
+    <div id="hotmart-sales-funnel-1"></div>
+    <p class="btn-sub">
+      <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+      Compra 100% segura · Acesso imediato · 7 dias de garantia
+    </p>
+  </section>
+
   <!-- ============ AUTORIDADE ============ -->
   <section class="authority">
     <p class="section-title">POR QUE CONFIAR</p>
@@ -696,14 +705,11 @@
 
   <!-- ============ CTA PRINCIPAL ============ -->
   <section class="cta-section">
-    <a href="#" class="btn-primary">
-      <span>SIM! QUERO O COMBO 8 EM 1 POR R$ 600</span>
-    </a>
+    <div id="hotmart-sales-funnel-2"></div>
     <p class="btn-sub">
       <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
       Compra 100% segura · Acesso imediato · 7 dias de garantia
     </p>
-    <span class="btn-decline">Não, obrigado. Prefiro pagar mais caro depois.</span>
   </section>
 
   <!-- ============ 8 CURSOS ============ -->
@@ -758,13 +764,10 @@
 
   <!-- ============ CTA SECUNDÁRIO ============ -->
   <section class="cta-section" style="padding-top: 16px;">
-    <a href="#" class="btn-primary">
-      <span>QUERO GARANTIR O COMBO 8 EM 1</span>
-    </a>
+    <div id="hotmart-sales-funnel-3"></div>
     <p class="btn-sub">
       R$ 600 à vista ou 12x R$ 62,05
     </p>
-    <span class="btn-decline">Não, obrigado. Prefiro pagar o valor cheio no futuro.</span>
   </section>
 
   <!-- ============ FAQ RÁPIDO ============ -->
@@ -799,13 +802,21 @@
 
   <!-- ============ CTA FINAL ============ -->
   <section class="cta-section" style="padding-bottom: 48px;">
-    <a href="#" class="btn-primary" style="background: linear-gradient(135deg, #dc2626, #ef4444);">
-      <span>ÚLTIMA CHANCE — QUERO O COMBO 8 EM 1</span>
-    </a>
+    <div id="hotmart-sales-funnel-4"></div>
     <p class="btn-sub" style="color: var(--accent-red); opacity: 0.7;">
       ⚠️ Esta página não estará mais disponível após sair
     </p>
   </section>
+
+  <!-- HOTMART - Sales Funnel Widget -->
+  <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+  <script>
+    checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel-1');
+    checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel-2');
+    checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel-3');
+    checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel-4');
+  </script>
+  <!-- /HOTMART - Sales Funnel Widget -->
 
   <!-- ============ WHATSAPP ATENDIMENTO ============ -->
   <section style="text-align:center; padding: 0 0 40px;">
