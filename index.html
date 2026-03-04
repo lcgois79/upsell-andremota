@@ -40,18 +40,15 @@
     overflow-x: hidden;
   }
 
-  /* ======== LAYOUT ======== */
   .page-wrapper {
     max-width: 780px;
     margin: 0 auto;
     padding: 0 24px;
   }
 
-  section {
-    padding: 48px 0;
-  }
+  section { padding: 48px 0; }
 
-  /* ======== TOPBAR URGENCY ======== */
+  /* TOPBAR */
   .topbar {
     background: linear-gradient(90deg, var(--accent-red), #dc2626);
     padding: 14px 20px;
@@ -60,7 +57,6 @@
     top: 0;
     z-index: 100;
   }
-
   .topbar p {
     font-family: var(--font-display);
     font-size: 15px;
@@ -73,44 +69,19 @@
     justify-content: center;
     gap: 10px;
   }
-
   .topbar .pulse-dot {
-    width: 8px;
-    height: 8px;
+    width: 8px; height: 8px;
     background: white;
     border-radius: 50%;
     animation: pulse 1.2s ease-in-out infinite;
   }
-
   @keyframes pulse {
     0%,100% { opacity: 1; transform: scale(1); }
     50% { opacity: 0.4; transform: scale(1.5); }
   }
 
-  /* ======== HERO / HEADLINE ======== */
-  .hero {
-    text-align: center;
-    padding-top: 56px;
-    padding-bottom: 40px;
-  }
-
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--accent-yellow-soft);
-    border: 1px solid rgba(234,179,8,0.25);
-    color: var(--accent-yellow);
-    font-family: var(--font-display);
-    font-size: 13px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    padding: 8px 22px;
-    border-radius: 100px;
-    margin-bottom: 28px;
-  }
-
+  /* HERO */
+  .hero { text-align: center; padding-top: 56px; padding-bottom: 40px; }
   .hero h1 {
     font-family: var(--font-display);
     font-size: clamp(32px, 6vw, 48px);
@@ -119,13 +90,11 @@
     color: var(--text-primary);
     margin-bottom: 18px;
   }
-
   .hero h1 .highlight {
     background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
   .hero-sub {
     font-size: 18px;
     color: var(--text-secondary);
@@ -134,81 +103,11 @@
     line-height: 1.7;
   }
 
-  /* ======== VIDEO ======== */
-  .video-section {
-    padding-top: 0;
-    padding-bottom: 48px;
-  }
+  /* VIDEO */
+  .video-section { padding-top: 0; padding-bottom: 48px; }
 
-  .video-container {
-    position: relative;
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    overflow: hidden;
-    aspect-ratio: 16/9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-
-  .video-container::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(59,130,246,0.05), rgba(168,85,247,0.05));
-  }
-
-  .play-btn {
-    width: 80px;
-    height: 80px;
-    background: rgba(255,255,255,0.1);
-    border: 2px solid rgba(255,255,255,0.2);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 2;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s;
-  }
-
-  .play-btn:hover {
-    background: rgba(255,255,255,0.15);
-    transform: scale(1.08);
-  }
-
-  .play-btn::after {
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 14px 0 14px 24px;
-    border-color: transparent transparent transparent white;
-    margin-left: 4px;
-  }
-
-  .video-label {
-    position: absolute;
-    bottom: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: var(--font-display);
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    z-index: 2;
-  }
-
-  /* ======== ANCHOR TABLE ======== */
-  .anchor-section {
-    padding-top: 0;
-  }
-
+  /* ANCHOR TABLE */
+  .anchor-section { padding-top: 0; }
   .section-title {
     font-family: var(--font-display);
     font-size: 14px;
@@ -219,14 +118,12 @@
     text-align: center;
     margin-bottom: 28px;
   }
-
   .anchor-table {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     overflow: hidden;
   }
-
   .anchor-row {
     display: flex;
     justify-content: space-between;
@@ -234,11 +131,7 @@
     padding: 20px 28px;
     border-bottom: 1px solid var(--border);
   }
-
-  .anchor-row:last-child {
-    border-bottom: none;
-  }
-
+  .anchor-row:last-child { border-bottom: none; }
   .anchor-row .label {
     font-family: var(--font-display);
     font-size: 16px;
@@ -248,7 +141,6 @@
     letter-spacing: 0.3px;
     flex: 1;
   }
-
   .anchor-row .value {
     font-family: var(--font-display);
     font-size: 18px;
@@ -256,7 +148,6 @@
     text-align: right;
     white-space: nowrap;
   }
-
   .row-anuidade { background: rgba(255,255,255,0.01); }
   .row-anuidade .label { color: var(--text-muted); }
   .row-anuidade .value {
@@ -265,376 +156,219 @@
     text-decoration-color: rgba(239,68,68,0.5);
     text-decoration-thickness: 2px;
   }
-
   .row-unico { background: var(--accent-blue-soft); }
   .row-unico .value { color: var(--accent-blue); }
-
   .row-cashback { background: var(--accent-green-soft); }
   .row-cashback .label { color: var(--accent-green); }
   .row-cashback .value { color: var(--accent-green); }
-
   .row-bonus { background: var(--accent-purple-soft); }
   .row-bonus .label { color: var(--accent-purple); }
   .row-bonus .value { color: var(--accent-purple); }
-
   .row-total {
     background: linear-gradient(90deg, var(--accent-green-soft), rgba(34,197,94,0.05));
     padding: 28px;
     border-top: 2px solid rgba(34,197,94,0.25);
   }
-  .row-total .label {
-    font-size: 20px;
-    font-weight: 900;
-    color: white;
-  }
+  .row-total .label { font-size: 20px; font-weight: 900; color: white; }
   .row-total .label small {
-    display: block;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--text-secondary);
-    letter-spacing: 1px;
-    margin-top: 4px;
+    display: block; font-size: 12px; font-weight: 600;
+    color: var(--text-secondary); letter-spacing: 1px; margin-top: 4px;
   }
   .row-total .value {
-    font-size: 32px;
-    font-weight: 900;
+    font-size: 32px; font-weight: 900;
     color: var(--accent-green);
     text-shadow: 0 0 30px rgba(34,197,94,0.3);
   }
   .row-total .value small {
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--text-secondary);
-    text-shadow: none;
+    display: block; font-size: 14px; font-weight: 600;
+    color: var(--text-secondary); text-shadow: none;
   }
-
   .tag {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 800;
-    padding: 3px 10px;
-    border-radius: 6px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-left: 8px;
-    vertical-align: middle;
+    display: inline-block; font-size: 11px; font-weight: 800;
+    padding: 3px 10px; border-radius: 6px;
+    text-transform: uppercase; letter-spacing: 1px;
+    margin-left: 8px; vertical-align: middle;
   }
+  .tag-green { background: var(--accent-green); color: #052e16; }
+  .tag-purple { background: var(--accent-purple); color: white; }
 
-  .tag-green {
-    background: var(--accent-green);
-    color: #052e16;
-  }
-
-  .tag-purple {
-    background: var(--accent-purple);
-    color: white;
-  }
-
-  /* ======== CTA ======== */
-  .cta-section {
-    text-align: center;
-    padding: 40px 0 24px;
-  }
-
+  /* CTA */
+  .cta-section { text-align: center; padding: 40px 0 24px; }
   .btn-primary {
-    display: block;
-    width: 100%;
-    padding: 22px 32px;
+    display: block; width: 100%; padding: 22px 32px;
     background: linear-gradient(135deg, var(--accent-green), #16a34a);
-    color: white;
-    font-family: var(--font-display);
-    font-size: 20px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: none;
-    border-radius: 14px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s;
+    color: white; font-family: var(--font-display);
+    font-size: 20px; font-weight: 900;
+    text-transform: uppercase; letter-spacing: 1px;
+    border: none; border-radius: 14px; cursor: pointer;
+    position: relative; overflow: hidden; transition: all 0.3s;
     box-shadow: 0 8px 32px rgba(34,197,94,0.3);
-    text-decoration: none;
-    text-align: center;
+    text-decoration: none; text-align: center;
   }
-
   .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 40px rgba(34,197,94,0.4);
   }
-
   .btn-primary::after {
     content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
+    position: absolute; top: -50%; left: -50%;
+    width: 200%; height: 200%;
     background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
     animation: shimmer 3s ease-in-out infinite;
   }
-
   @keyframes shimmer {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
   }
-
-  .btn-primary span {
-    position: relative;
-    z-index: 2;
-  }
-
+  .btn-primary span { position: relative; z-index: 2; }
   .btn-sub {
-    font-size: 13px;
-    color: var(--text-muted);
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
+    font-size: 13px; color: var(--text-muted); margin-top: 8px;
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+  }
+  .btn-sub svg { width: 14px; height: 14px; fill: var(--text-muted); }
+
+  /* WHATSAPP BTN */
+  .btn-whatsapp {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(37,211,102,0.10);
+    border: 1px solid rgba(37,211,102,0.25);
+    color: #25d366;
+    font-family: var(--font-display);
+    font-size: 15px; font-weight: 700;
+    padding: 14px 28px; border-radius: 100px;
+    text-decoration: none; transition: all 0.2s;
+  }
+  .btn-whatsapp:hover {
+    background: rgba(37,211,102,0.18);
+    border-color: rgba(37,211,102,0.45);
+    transform: translateY(-1px);
   }
 
-  .btn-sub svg {
-    width: 14px;
-    height: 14px;
-    fill: var(--text-muted);
-  }
-
-  .btn-decline {
-    display: inline-block;
-    margin-top: 20px;
-    font-size: 13px;
-    color: var(--text-muted);
-    text-decoration: underline;
-    text-decoration-color: rgba(255,255,255,0.1);
-    cursor: pointer;
-    transition: color 0.2s;
-    font-style: italic;
-  }
-
-  .btn-decline:hover {
-    color: var(--text-secondary);
-  }
-
-  /* ======== GUARANTEE ======== */
+  /* GUARANTEE */
   .guarantee {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 32px;
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
+    display: flex; gap: 20px; align-items: flex-start;
   }
-
   .guarantee-icon {
-    width: 56px;
-    height: 56px;
-    min-width: 56px;
+    width: 56px; height: 56px; min-width: 56px;
     background: var(--accent-green-soft);
     border: 1px solid rgba(34,197,94,0.2);
     border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; align-items: center; justify-content: center;
     font-size: 28px;
   }
-
   .guarantee h3 {
-    font-family: var(--font-display);
-    font-size: 18px;
-    font-weight: 800;
-    color: var(--accent-green);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
+    font-family: var(--font-display); font-size: 18px; font-weight: 800;
+    color: var(--accent-green); text-transform: uppercase;
+    letter-spacing: 1px; margin-bottom: 8px;
   }
+  .guarantee p { font-size: 15px; color: var(--text-secondary); line-height: 1.7; }
 
-  .guarantee p {
-    font-size: 15px;
-    color: var(--text-secondary);
-    line-height: 1.7;
-  }
-
-  /* ======== COURSES LIST ======== */
-  .courses-section {
-    padding-top: 48px;
-  }
-
-  .courses-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-
+  /* COURSES */
+  .courses-section { padding-top: 48px; }
+  .courses-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   .course-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 18px 20px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px 20px;
+    display: flex; align-items: center; gap: 12px;
   }
-
   .course-num {
-    width: 32px;
-    height: 32px;
-    min-width: 32px;
-    background: var(--accent-blue-soft);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-display);
-    font-size: 13px;
-    font-weight: 800;
+    width: 32px; height: 32px; min-width: 32px;
+    background: var(--accent-blue-soft); border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 13px; font-weight: 800;
     color: var(--accent-blue);
   }
-
-  .course-card.bonus .course-num {
-    background: var(--accent-purple-soft);
-    color: var(--accent-purple);
-  }
-
+  .course-card.bonus .course-num { background: var(--accent-purple-soft); color: var(--accent-purple); }
   .course-name {
-    font-family: var(--font-display);
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--text-primary);
-    text-transform: uppercase;
-    letter-spacing: 0.2px;
-    line-height: 1.4;
+    font-family: var(--font-display); font-size: 13px; font-weight: 700;
+    color: var(--text-primary); text-transform: uppercase;
+    letter-spacing: 0.2px; line-height: 1.4;
   }
+  .course-card.bonus .course-name { color: var(--accent-purple); }
 
-  .course-card.bonus .course-name {
-    color: var(--accent-purple);
-  }
-
-  /* ======== SOCIAL PROOF / AUTHORITY ======== */
-  .authority {
-    text-align: center;
-    padding: 48px 0 24px;
-  }
-
-  .authority-stats {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 24px;
-  }
-
-  .stat {
-    text-align: center;
-  }
-
-  .stat-num {
-    font-family: var(--font-display);
-    font-size: 36px;
-    font-weight: 900;
-    color: var(--accent-blue);
-  }
-
+  /* AUTHORITY */
+  .authority { text-align: center; padding: 48px 0 24px; }
+  .authority-stats { display: flex; justify-content: center; gap: 40px; margin-top: 24px; }
+  .stat { text-align: center; }
+  .stat-num { font-family: var(--font-display); font-size: 36px; font-weight: 900; color: var(--accent-blue); }
   .stat-label {
-    font-size: 13px;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
-    margin-top: 4px;
+    font-size: 13px; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1px;
+    font-weight: 600; margin-top: 4px;
   }
 
-  /* ======== FAQ ======== */
-  .faq-section {
-    padding-bottom: 48px;
-  }
-
+  /* FAQ */
+  .faq-section { padding-bottom: 48px; }
   .faq-item {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin-bottom: 10px;
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 24px; margin-bottom: 10px;
   }
+  .faq-q { font-family: var(--font-display); font-size: 15px; font-weight: 800; color: var(--text-primary); margin-bottom: 8px; }
+  .faq-a { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
 
-  .faq-q {
-    font-family: var(--font-display);
-    font-size: 15px;
-    font-weight: 800;
-    color: var(--text-primary);
-    margin-bottom: 8px;
-  }
-
-  .faq-a {
-    font-size: 14px;
-    color: var(--text-secondary);
-    line-height: 1.7;
-  }
-
-  /* ======== FOOTER ======== */
+  /* FOOTER */
   .footer {
-    text-align: center;
-    padding: 32px 0;
+    text-align: center; padding: 32px 0;
     border-top: 1px solid var(--border);
   }
-
   .footer-badges {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-bottom: 16px;
-    opacity: 0.4;
+    display: flex; justify-content: center;
+    gap: 16px; margin-bottom: 16px; flex-wrap: wrap;
   }
-
   .footer-badge {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+    font-size: 13px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1px;
+    display: flex; align-items: center; gap: 6px;
+    padding: 8px 16px; border-radius: 100px;
   }
-
-  .footer p {
-    font-size: 12px;
-    color: var(--text-muted);
+  .footer-badge.badge-secure {
+    color: var(--accent-green);
+    background: var(--accent-green-soft);
+    border: 1px solid rgba(34,197,94,0.25);
   }
-
-  .divider {
-    height: 1px;
-    background: var(--border);
-    margin: 16px 0;
+  .footer-badge.badge-access {
+    color: var(--accent-blue);
+    background: var(--accent-blue-soft);
+    border: 1px solid rgba(59,130,246,0.25);
   }
+  .footer-badge.badge-guarantee {
+    color: var(--accent-yellow);
+    background: var(--accent-yellow-soft);
+    border: 1px solid rgba(234,179,8,0.25);
+  }
+  .footer p { font-size: 12px; color: var(--text-muted); margin-top: 8px; }
 
-  /* ======== MOBILE ======== */
+  /* MOBILE */
   @media (max-width: 600px) {
     .courses-grid { grid-template-columns: 1fr; }
     .authority-stats { flex-direction: column; gap: 20px; }
     .guarantee { flex-direction: column; text-align: center; align-items: center; }
     .anchor-row { padding: 16px 20px; flex-direction: column; gap: 4px; align-items: flex-start; }
     .anchor-row .value { text-align: left; }
+    .footer-badges { flex-direction: column; align-items: center; gap: 10px; }
   }
 </style>
 </head>
 <body>
 
-<!-- ============ TOPBAR URGÊNCIA ============ -->
+<!-- TOPBAR URGÊNCIA -->
 <div class="topbar">
   <p><span class="pulse-dot"></span> ESTA OFERTA DESAPARECE QUANDO VOCÊ SAIR DESTA PÁGINA</p>
 </div>
 
 <div class="page-wrapper">
 
-  <!-- ============ HERO ============ -->
+  <!-- HERO -->
   <section class="hero">
     <h1>ESPERA! Antes de acessar suas aulas, tenho uma <span class="highlight">proposta exclusiva</span> para você.</h1>
     <p class="hero-sub">Como aluno do Começando do Zero, você desbloqueou uma condição especial que não existe em nenhum outro lugar.</p>
   </section>
 
-  <!-- ============ VÍDEO ============ -->
+  <!-- VÍDEO -->
   <section class="video-section">
     <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;border-radius:16px;">
       <iframe
@@ -647,8 +381,8 @@
     </div>
   </section>
 
-  <!-- ============ CTA PÓS-VÍDEO ============ -->
-  <section class="cta-section" style="padding-top: 24px; padding-bottom: 8px;">
+  <!-- CTA PÓS-VÍDEO — Widget Hotmart (âncora para o botão pós-garantia) -->
+  <section class="cta-section" id="widget-oferta" style="padding-top: 24px; padding-bottom: 8px;">
     <div id="hotmart-sales-funnel-1"></div>
     <p class="btn-sub">
       <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
@@ -656,7 +390,7 @@
     </p>
   </section>
 
-  <!-- ============ AUTORIDADE ============ -->
+  <!-- AUTORIDADE -->
   <section class="authority">
     <p class="section-title">POR QUE CONFIAR</p>
     <div class="authority-stats">
@@ -675,10 +409,9 @@
     </div>
   </section>
 
-  <!-- ============ TABELA DE ANCORAGEM ============ -->
+  <!-- TABELA DE ANCORAGEM -->
   <section class="anchor-section">
     <p class="section-title">O QUE VOCÊ ESTÁ DESBLOQUEANDO</p>
-    
     <div class="anchor-table">
       <div class="anchor-row row-anuidade">
         <span class="label">Combo 7 em 1 (anuidade normal)</span>
@@ -703,9 +436,19 @@
     </div>
   </section>
 
+  <!-- CTA WHATSAPP PRÉ-CURSOS -->
+  <section style="text-align:center; padding: 32px 0 16px;">
+    <p style="font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px;">Ficou com dúvida antes de decidir?</p>
+    <a href="https://wa.me/5581994417094?text=Ol%C3%A1%2C%20gostaria%20de%20adquirir%20o%20Combo%208%20em%201%20e%20preciso%20de%20ajuda"
+       target="_blank"
+       class="btn-whatsapp">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Falar com atendimento
+    </a>
+    <p style="font-size:12px;color:rgba(255,255,255,0.25);margin-top:10px;font-family:'DM Sans',sans-serif;">Nossa equipe responde em minutos.</p>
+  </section>
 
-
-  <!-- ============ 8 CURSOS ============ -->
+  <!-- 8 CURSOS -->
   <section class="courses-section">
     <p class="section-title">O QUE VEM DENTRO DO COMBO 8 EM 1</p>
     <div class="courses-grid">
@@ -744,7 +487,7 @@
     </div>
   </section>
 
-  <!-- ============ GARANTIA ============ -->
+  <!-- GARANTIA -->
   <section>
     <div class="guarantee">
       <div class="guarantee-icon">🛡️</div>
@@ -755,11 +498,11 @@
     </div>
   </section>
 
-  <!-- ============ CTA PÓS-GARANTIA ============ -->
+  <!-- CTA PÓS-GARANTIA — scroll suave até o widget -->
   <section class="cta-section" style="padding-top: 8px; padding-bottom: 32px;">
-    <a href="https://pay.hotmart.com/G102768923M?off=b526nyok&utm_source=upsell_page&utm_medium=cta_garantia&utm_campaign=cashback_cdz"
+    <a href="#widget-oferta"
        class="btn-primary"
-       target="_blank">
+       onclick="event.preventDefault(); document.getElementById('widget-oferta').scrollIntoView({behavior:'smooth'});">
       <span>✅ SIM! QUERO O COMBO 8 EM 1 POR R$ 600</span>
     </a>
     <p class="btn-sub">
@@ -767,32 +510,25 @@
     </p>
   </section>
 
-
-
-  <!-- ============ FAQ RÁPIDO ============ -->
+  <!-- FAQ -->
   <section class="faq-section">
     <p class="section-title">DÚVIDAS RÁPIDAS</p>
-    
     <div class="faq-item">
       <div class="faq-q">Acabei de comprar o CDZ. Faz sentido investir mais agora?</div>
       <div class="faq-a">Sim. Você vai estudar Processo Civil de qualquer forma. A diferença é: comprar curso por curso ao longo dos anos, pagando mais caro, ou resolver tudo agora por uma fração do valor com o sistema completo.</div>
     </div>
-
     <div class="faq-item">
       <div class="faq-q">E se eu não tiver tempo de fazer tudo agora?</div>
       <div class="faq-a">Sem problema. Faça no seu ritmo — as aulas são gravadas e ficam disponíveis enquanto você tiver acesso ativo. Mas o preço de R$ 600 por 8 cursos só existe aqui, nesta página.</div>
     </div>
-
     <div class="faq-item">
       <div class="faq-q">Como funciona o cashback de R$ 97?</div>
       <div class="faq-a">Como você acabou de pagar R$ 97 no Começando do Zero, esse valor é devolvido ao adquirir o Combo. Assim, o investimento real cai de R$ 697 para R$ 600.</div>
     </div>
-
     <div class="faq-item">
       <div class="faq-q">O curso de Direito de Família está realmente incluído?</div>
       <div class="faq-a">Sim. Exclusivamente nesta oferta, o Combo 7 em 1 vira Combo 8 em 1 com a inclusão do curso de Prática em Direito de Família (valor avulso: R$ 697) sem custo adicional.</div>
     </div>
-
     <div class="faq-item">
       <div class="faq-q">Essa oferta volta depois?</div>
       <div class="faq-a">Não. Esta condição é exclusiva desta página, neste momento. Se você sair, o link desaparece e cada curso volta ao preço avulso.</div>
@@ -806,28 +542,27 @@
   </script>
   <!-- /HOTMART - Sales Funnel Widget -->
 
-  <!-- ============ WHATSAPP ATENDIMENTO ============ -->
+  <!-- WHATSAPP ATENDIMENTO (rodapé) -->
   <section style="text-align:center; padding: 0 0 40px;">
-    <a href="https://wa.me/5581994417094?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20o%20Combo%208%20em%201" 
+    <a href="https://wa.me/5581994417094?text=Ol%C3%A1%2C%20gostaria%20de%20adquirir%20o%20Combo%208%20em%201%20e%20preciso%20de%20ajuda"
        target="_blank"
-       style="display:inline-flex;align-items:center;gap:10px;background:rgba(37,211,102,0.10);border:1px solid rgba(37,211,102,0.25);color:#25d366;font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:700;padding:14px 28px;border-radius:100px;text-decoration:none;transition:all 0.2s;">
+       class="btn-whatsapp">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       Falar com atendimento
     </a>
     <p style="font-size:12px;color:rgba(255,255,255,0.25);margin-top:10px;font-family:'DM Sans',sans-serif;">Dúvidas comerciais? Nossa equipe responde em minutos.</p>
   </section>
 
-  <!-- ============ FOOTER ============ -->
+  <!-- FOOTER -->
   <div class="footer">
     <div class="footer-badges">
-      <span class="footer-badge">🔒 Pagamento seguro</span>
-      <span class="footer-badge">📱 Acesso imediato</span>
-      <span class="footer-badge">🛡️ 7 dias de garantia</span>
+      <span class="footer-badge badge-secure">🔒 Pagamento seguro</span>
+      <span class="footer-badge badge-access">📱 Acesso imediato</span>
+      <span class="footer-badge badge-guarantee">🛡️ 7 dias de garantia</span>
     </div>
     <p>Prof. André Mota · @profandremota · Todos os direitos reservados</p>
   </div>
 
 </div>
-
 </body>
 </html>
